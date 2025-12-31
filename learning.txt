@@ -1,0 +1,16 @@
+Run Pytest test from terminal with commands and options 
+
+##To run test file
+pytest -s Test_FileName
+
+#To run specific test in file use this
+pytest -s Testfile_fileName::Test_function_name
+
+#To skip specific test case from a file use mark at above of the test function like below
+@pytest.mark.skip
+def test_name():
+
+#skip test case in command line
+pytest --deselect test_filename::Test_function_name
+
+

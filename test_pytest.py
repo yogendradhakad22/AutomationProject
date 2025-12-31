@@ -14,8 +14,16 @@ def sample_fixture():
     print("This will run before test function")
 
 def test_example(sample_fixture):
+    print("this is the test function")
     assert 1 + 1 == 2
 
 def test_another_example():
     assert "hello".upper() == "HELLO"
     
+@pytest.mark.skip
+def test_skipped_example():
+    assert 2 * 2 == 5
+
+@pytest.mark.smoke
+def test_smoke_example():
+    assert 3 - 1 == 2
